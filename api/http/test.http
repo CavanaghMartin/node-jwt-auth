@@ -1,0 +1,61 @@
+### Public Routes
+
+GET http://localhost:3000/
+
+### 
+GET http://localhost:3000/about
+
+### Test private routes with Token
+GET http://localhost:3000/me
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZDY1ZWI2ODQwZDAwMWM2Y2RjNDM2OSIsImlhdCI6MTYyNDY2MTY4NiwiZXhwIjoxNjI0NzQ4MDg2fQ.J2xAAEMF6J7VY-Pqe2tqcsiAIX8dZ69cRrm_k7-UJVM
+
+
+### Register an user
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+  "username": "Ryan Ray",
+  "email": "ryanray@gmail.com",
+  "password": "somepassword"
+}
+
+### Signin an user
+POST http://localhost:3000/signin
+Content-Type: application/json
+
+{
+  "email": "ryanray@gmail.com",
+  "password": "somepassword"
+}
+
+### get the private route with a token
+GET http://localhost:3000/me
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYzZjMDVmZTM0NTVlNDVkNDViZDM3MiIsImlhdCI6MTYyMzYzODUzMywiZXhwIjoxNjIzNzI0OTMzfQ.oq-yIs08cs_FYo0Jfq9gu1rmdTeg9k1IZ5RFyjWzpnE
+### Get tasks
+GET http://localhost:3000/tasks
+
+### Create Task
+POST http://localhost:3000/tasks
+Content-Type: application/json
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZTVmNTg0ZmE0YWU1Mzg5NDRlZjk2YSIsImlhdCI6MTYyNTY4MzMzMiwiZXhwIjoxNjI1NzY5NzMyfQ.O6wQEIAxkJhKDxbM2bfm3FH06FFoG-UENIox5UF0RUk
+
+{
+  "title": "my secofnd task"
+}
+
+### Get single task
+GET http://localhost:3000/tasks/60e5f5a3fa4ae538944ef9
+
+### update single task
+PUT http://localhost:3000/tasks/60e5f5a3fa4ae538944ef9
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZTVmNTg0ZmE0YWU1Mzg5NDRlZjk2YSIsImlhdCI6MTYyNTY4MzMzMiwiZXhwIjoxNjI1NzY5NzMyfQ.O6wQEIAxkJhKDxbM2bfm3FH06FFoG-UENIox5UF0RUk
+
+{
+  "title": "third task"
+}
+
+### delete single task
+DELETE http://localhost:3000/tasks/60e5f5a4fa4ae538944ef96d
+x-access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZTVmNTg0ZmE0YWU1Mzg5NDRlZjk2YSIsImlhdCI6MTYyNTY4MzMzMiwiZXhwIjoxNjI1NzY5NzMyfQ.O6wQEIAxkJhKDxbM2bfm3FH06FFoG-UENIox5UF0RUk
