@@ -42,6 +42,7 @@ export default function SignUp() {
     setstate({
       ...state,
       [e.target.name]: e.target.value,
+      
     });
     console.log(state)
   }
@@ -78,7 +79,7 @@ export default function SignUp() {
             <Grid item xs={12} sm={6}>
               <TextField
                 autoComplete="fname"
-                name="firstName"
+                name="username"
                 variant="outlined"
                 required
                 fullWidth
