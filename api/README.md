@@ -1,4 +1,4 @@
-# JWT Simple Exampel
+# JWT Simple Example
 
 ## Installation
 
@@ -7,7 +7,7 @@ npm i
 npm run build
 npm start
 ```
-
+<!-- 
 ## Todo
 
 - [x] Add Docker to the project
@@ -17,4 +17,4 @@ npm start
 
 ## Resources
 
-- [How to destroy token on logout - Stackoverflow](https://stackoverflow.com/questions/37959945/how-to-destroy-jwt-tokens-on-logout)
+- [How to destroy token on logout - Stackoverflow](https://stackoverflow.com/questions/37959945/how-to-destroy-jwt-tokens-on-logout) -->
