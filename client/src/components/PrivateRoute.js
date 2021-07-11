@@ -13,6 +13,7 @@ const PrivateRoute = ({ component: RouteComponent, ...rest }) => {
           ? (
             <RouteComponent {...routeProps} />
           ) : (
+         
             <Redirect to={"/"} />
           )
       }

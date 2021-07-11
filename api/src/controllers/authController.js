@@ -45,7 +45,7 @@ export const getProfile = async (req, res) => {
 export const signinController = async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
   if (!user) {
-    return res.status(404).send("The email doesn't exists");
+    return res.status(401).send("The email doesn't exists");
   }
   const validPassword = await user.comparePassword(
     req.body.password,
